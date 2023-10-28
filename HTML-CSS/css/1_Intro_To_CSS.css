@@ -1,0 +1,25 @@
+/**
+    What is CSS?
+        -> Cascading Style Sheet
+
+        -> Used to put the styles for your web page content and helps to render the elements on differnt devices and screen(desktop, tablets, mobile)
+
+    Who invented CSS?
+        -> Hakon Wium Lie and Bert Bos, in 1994 
+
+    How many ways to load the CSS on the Browser?
+
+        - 3 ways:
+
+             1. Inline: used for specific elements
+             2. Internal: provide styling to group of elements but within the same web page
+             3. External: Reusable styles that can used and embed in any web pages.
+
+*/
+
+
+.header-overlay {
+    padding: 50px;
+    margin: 20px;
+    color: #e23c3c;
+}

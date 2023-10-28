@@ -1,0 +1,39 @@
+/***
+
+   What is CSS selectors?
+
+      -> Selectors are used to identify the HTML content to which you are required to apply the styles.
+
+   Types of CSS selectors:
+
+      1. class (.)
+      2. id (#)
+      3. element/tags name
+      4. universal (*)
+      5. Attribute selector
+      6. Combinators: To select elements with more than one class for applying the styles.
+            .class1.class2 {}
+*/
+
+/***
+     Quizz:1
+        1. Make all the paragraphs color red
+        2. Give every element with class "bggreen" background color of lightgreen
+        3. Make every element with id "special" -> underline
+*/
+
+* {
+  font-size:  30px;
+}
+
+p {
+    color: red;
+}
+
+.bggreen {
+    background-color: lightgreen;
+}
+
+#special {
+    text-decoration: underline;
+}

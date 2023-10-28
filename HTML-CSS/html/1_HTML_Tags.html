@@ -1,0 +1,152 @@
+<!-- 
+    What is HTML/HTML5?
+        -> Hyper Text Markup Language.
+
+        -> Used to create the web pages.
+
+        -> HTML Tags -> they pre-defined tags to display content on the web pages
+
+        -> Tells the browser how to display the content.
+
+    Who invented the HTML?
+
+        -> Sir Tim Berners-Lee, in 1990.
+        -> he also created a very first web browser, name WWW(World Wide Web).
+
+        Eg: name of attr and value of attribute
+            <p class="text">   This is the paragraph.   </p>
+        start tag  attribute                 content              end tag/closing tag
+
+    How many types of HTML tags?
+
+       -> 3 kinds of tags
+
+            1. open and close tags: <element></element> -> element is the name of tag.
+                eg: <header>Header</header>, <p>This is the para</p>
+
+            2. self-closing tag: they don't require the closin tag itself.
+                eg: <br>|<br /> , <img>|<img />, <hr> | <hr />
+
+            3. Empty tags: When there is no content in between the opening and closing tags.
+                <p></p>
+
+        -> categorisation of tags:
+
+            1. block-level elements : Starts on a new line and takes the full width of the browser screen.
+                 eg: <div></div>, <h1> to <h6>, <p> etc .
+
+            2. inline-level elements: That doesn't start on a new line/ start within a same line 
+                                      and they only takes up as much width as necessary.
+
+                eg: <span></span>, <img>, <input> tags etc.
+
+        -> Every HTML tags is also having attributes:
+
+              HTML attributes provides the additional information about the HTML tags to the browser. -> That's why HTML attributes are required.
+
+              How many types HTML attibutes?
+                1. global attributes (eg: class, id, style, data-*)
+                2. Events attributes (eg: onclick, onload, onunload)
+                3. HTML specific attributes (eg: <img src="path of the image" alt="name of the image"/>
+                                                 <a target="_blank" href="navigation of the page define"></a>)
+
+
+        -> Semantic tags: 
+             - a tag that has some literal meaning.
+             - used to wrap around the block of text.
+             - <header>, <footer>, <main>, <section>, <article>, <aside>, <nav>
+
+            -> Purpose of using semantic tags:
+                - Better code readability
+                - For the SEO: the structure of the web page helps the search engine crawler to find the topics.
+                - Adds the accessibility: to the understood the content via screen reader software for the physical disabled person.
+
+        Reference for all HTML tags:
+          MDN HTML Tags: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#main_root
+          Shortcut keys for fast development: https://dev.to/hannahgooding/vs-code-shortcuts-and-tricks-that-i-wish-i-knew-sooner-3mcj
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Page</title>
+    <!--Internal styles -->
+    <style>
+        /* .header-overlay {
+            padding: 50px;
+            margin: 20px;
+            color: #e23c3c;
+        } */
+
+        /* #header {
+            padding: 50px;
+            margin: 20px;
+            color: #e23c3c;
+        } */
+    </style>
+
+    <!--External styles -->
+    <link rel="stylesheet" href="../css/1_Intro_To_CSS.css"/>
+</head>
+<body>
+
+    <!-- This the header section -->
+    <header>
+        <nav>
+            <ul>
+                <!--Inline styles -->
+                <li><a href="#1" style="color:brown">features</a></li>
+                <li><a href="#2">details</a></li>
+                <li><a href="#3">reviews</a></li>
+                <li><a href="#4">plans</a></li>
+                <li><a style="color:green" href="#5">contact us</a></li>
+            </ul>
+            <div class="header-overlay" id="header">
+                <div class="header-cont">
+                    <h1>Meal Plans.
+                       <br />
+                       For <span> Everyone </span>
+                    </h1>
+                    <div class="btn-cont">
+                        <a href="">Book Now</a>
+                        <a href="">Show me more</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- This is the features section -->
+        <section></section>
+
+         <!-- This is the steps to follow section -->
+        <section></section>
+
+         <!-- Thisis the review section -->
+        <section>
+            <img /> 
+
+        </section>
+
+         <!-- This the pricing section -->
+        <section></section>
+
+         <!-- This the contact us section -->
+        <section>
+            <h2>Contact us</h2>
+            <div>
+                <div>left section for the image</div>
+                <div>contact us form</div>
+            </div>
+        </section>
+    </main>
+
+     <!-- This the footer section -->
+    <footer></footer>
+
+    
+</body>
+</html>
