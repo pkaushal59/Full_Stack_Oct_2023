@@ -1,0 +1,109 @@
+/***
+
+   What is CSS selectors?
+
+      -> Selectors are used to identify the HTML content to which you are required to apply the styles.
+
+      -> selectors(elemenets/#id/.classname) {
+            properties (key: value)
+               color: 'blue'
+         }-> rules
+   Types of CSS selectors:
+
+      1. class (.)
+      2. id (#)
+      3. element/tags name
+      4. universal (*)
+      5. Combinators: To select elements with more than one class for applying the styles.
+            .class1.class2 {}
+      6. Attribute selector: 
+            -> you are applying the styles to the elements by selecting the attributes of the elements.
+            -> [attribute] or [atttibute="value"]
+            -> [atttibute~="value"] -> selects the element with specified attribute whose value contains the specified words
+            -> [atttibute*="value"] -> selects the element with specified attribute whose value contains the substring of specified value
+            -> [atttibute^="value"] -> selects the element with specified attribute whose value is starts with specified value
+
+      7. Descendant selector:
+            -> selects all the descendants of the spedified element.
+            -> element element {
+                  CSS properties
+               }
+      8. Child Selector:
+            -> Selects all the elements which are the children of a specified element. 
+            -> element > element {
+                  properties
+               }
+
+      9. pseudo class selector: (:pseudo-class) -> used to define the special state of an element.
+
+      10. pseudo element selector: (::pseudo-element) -> used to style the specified part of an element
+
+             usecases:
+             1. provide circle border around images
+             2. if you want to put icon before or after the button text.
+*/
+
+/* .text-1 {
+   color: red;
+} */
+
+
+
+
+/* [data-val^="t"] {
+   color: magenta;
+   font-size: 50px;
+} */
+
+/* #para-1 {
+   color: magenta;
+   font-size: 24px;
+} */
+
+/* .text {
+   color: blue;
+}
+
+.text-1 {
+   color: red;
+   font-size: 18px;
+}
+
+.text-2 {
+   color: green;
+   font-size: 24px;
+   font-weight: 600;
+} */
+
+/* p {
+   color: blue;
+} */
+
+/* div .text-3{
+   color: red;
+} */
+
+/* div > p {
+   color:  red;
+}
+
+.div-3 > .text-3 {
+   color: magenta;
+}
+
+.div-3 p:hover {
+   color: green;
+}
+
+div p::after { 
+   content: 'data-> ';
+   font-size: 40px;
+} */
+
+
+
+
+
+
+
+

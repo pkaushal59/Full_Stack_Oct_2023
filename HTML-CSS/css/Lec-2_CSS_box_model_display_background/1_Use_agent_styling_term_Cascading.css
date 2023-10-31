@@ -1,0 +1,56 @@
+/**
+    1. What is user agent(any web browsers) styling?
+
+        -> refers to default styling applied by the browser to the HTML elements.
+        -> But these user agent styling, you can override via user defined (inline, internal, external CSS)
+
+    2. What is cascading?
+
+        -> cascading means stairs.
+        -> CSS looks for the most specific and most recent used styles.
+        -> there 3 ways to load CSS in a browser
+           1. inline
+           2. internal
+           3. external
+
+           priority of CSS styles:
+            inline > internal/External > user agent styles (default browsers styles)
+            
+        Imp Note: For Best practices:
+
+        1. Don't use the inline styles. (few specific scenarios).
+        2. Internal styles - use for critical rendering CSS. (above the fold)
+        3. External styles - best practice to use for implemention the styles for different pages because we can the consistency.
+
+         
+*/
+
+/* p {
+    font-size: 24px;
+    color: red;;
+} */
+
+body {
+    height: 2000px;
+}
+
+
+h1 {
+    color: green
+}
+
+/**
+
+.class selector
+
+.text {
+   CSS for styles
+}
+or element selector
+
+div > p {
+ CSS for styles
+}
+
+
+*/

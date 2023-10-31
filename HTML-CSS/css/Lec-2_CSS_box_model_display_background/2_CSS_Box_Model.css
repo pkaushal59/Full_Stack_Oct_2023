@@ -1,0 +1,22 @@
+/***
+    What is Box Model in CSS?
+       -> Every element using a box which is known as box model.
+
+       -> Heigth of the element is: border top + padding top + height of the content
+       -> Width of the element is: horzonal border + horizontal padding + width of the content
+       -> Element: padding + border + content
+*/
+
+
+.box {
+    border: 1px solid red;
+    height: 100px;
+    width: 200px;
+    padding: 50px 20px 30px 40px; /*TRBL*/
+    background-color: rgb(40, 119, 188);
+    margin: 20px; /*TRBL*/
+}
+
+p {
+    border: 1px solid blue;
+}
