@@ -1,0 +1,46 @@
+<!--
+    Overflow property:
+       -> by default the any element's height equals to the height of the content inside it.
+       -> If there is no content then the height = 0px;
+       -> Let say there is a user-defined height. There majorly the 2 possiblities:
+          1. The height of the container > the height of the content.
+          2. The height of the container < the height of the content.
+             because of 2nd scenario there will an issue of overflow of the content. 
+
+        -> you have to use overflow property
+           1. visible(default): content will get overflow
+           2. hidden: content that is overflowing that will be hidden
+           3. scroll: will always add the scroll.
+           4. auto: will add scroll only if the content is bigger then the height of the container.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow property</title>
+    <style>
+        .box {
+            padding: 20px;
+            border:  1px solid red;
+            height: 100px;
+            width: 200px;
+            /* box-sizing: content-box; */
+            margin: 20px;
+            overflow: auto;
+        }
+
+        .border_box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box border_box">Lorem ipsum dolor </div>
+    
+</body>
+</html>

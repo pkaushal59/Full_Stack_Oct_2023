@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: red;
+        }
+
+        p {
+            color: green;
+        }
+
+        p::after {
+            content: '';
+            color: blue;
+        }
+
+        a.my-class { /*=> 0 1 1*/
+            font-size: 10px;
+        }
+
+        #test {  /* 100*/
+            color: blue
+        }
+
+        .class-1 p { /* 11 */
+            color: green
+        }
+    </style>
+</head>
+<body>
+
+    <p class="class-1" id="test">hello ashwani</p>
+    
+</body>
+</html>

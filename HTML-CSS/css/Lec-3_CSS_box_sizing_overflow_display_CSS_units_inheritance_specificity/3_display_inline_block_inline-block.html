@@ -1,0 +1,80 @@
+<!--
+    display property:
+
+       1. block:
+            -> the element is shown as a block level element.
+            -> takes full width of its parent container and start from a new line.
+            -> can give padding and margin as well.
+
+       2. inline:
+            -> the element is shown as a inline-level element.
+            -> allows to display the content on the same line of its parent container.
+               It doesn't begin on a new line.
+            -> cannot set height and width of inline element.
+            -> padding can used but margin works horizontally only.
+            -> inline lements don't bother about vertical margin of inline-level element.
+
+       3: inline-block:
+
+           -> It has both the properties value like inline and block.
+           -> somewhere in between inline and block.
+           -> It will take height, width, pdding and margin but doesn't take the whole width.
+        4. none:
+           
+           -> the element is not getting displayed and it does not take any space in the layout.
+           -> generally used to remove the content from document flow.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display: inline, block and inline-block</title>
+    <style>
+
+        .block {
+            display: block;
+            height: 100px;
+            width: 200px;
+            background-color: bisque;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .inline {
+            display: inline;
+            border: 1px solid red;
+            margin: 10px;
+            padding: 20px;
+            height: 200px;
+            width: 300px;
+        }
+
+        .inline_block {
+            display: inline-block;
+            height: 200px;
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="block">Hello, Friends!</h2>
+        <br />
+        <!-- <span class="inline"> How are you all?</span> -->
+    </div>
+
+    <div class="inline_block">
+        Inline block element content
+    </div>
+
+    
+</body>
+</html>

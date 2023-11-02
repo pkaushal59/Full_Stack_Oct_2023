@@ -1,0 +1,65 @@
+<!--
+    Box Model:
+       ->  Represents every element as a box(rectangles or squares)
+            ->  Intrinsic in size: if you don't specifiy the height and width the size of the box is determined by its intrinsic size.
+               So, size of the element depends on its content size.
+            -> Extrinsic in Size: If you specify the height and width then the size of the box is determined by its extrinsic in size. 
+               So, size of the element depends on height and width mentioned explicitly. 
+    What is box-sizing?
+        -> How the box size can be calculated? -> box-sizing property
+        -> 2 values are being used fro the box-sizing:
+           1. box-sizing: content-box; (default)
+
+            Total width of the box:   border(left+right) + padding(left+right) + width of the content
+               According to given example: 2px+ 40px+ 200px = 242px
+            Total height of the box:  border(top+bottom) + padding(top + bottom) + height of the content
+               According to given example: 2px+ 40px+ 100px = 142px
+
+            2. box-sizing: border-box;
+               
+              Total width of the content:   width of the content - border(left+right) - padding(left+right) + 
+               According to given example: 200px - 2px - 40px= 158px;
+              Total height of the content:  height of the content - border(top+bottom) - padding(top + bottom)
+               According to given example: 100px - 2px - 40px = 58px;
+         
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model and Box Sizing</title>
+    <style>
+        /* Intrinsic in size*/
+        /* .box {
+            padding: 20px;
+            border:  1px solid red;
+        } */
+
+         /* Extrinsic in size */
+        .box {
+            padding: 20px;
+            border:  1px solid red;
+            height: 100px;
+            width: 200px;
+            /* box-sizing: content-box; */
+            margin: 20px;
+        }
+
+        .border_box {
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Box Model -->
+    <div class="box">Box 1 -> content box</div>
+    <div class="box border_box">Box 2 -> Border Box</div>
+    
+</body>
+</html>

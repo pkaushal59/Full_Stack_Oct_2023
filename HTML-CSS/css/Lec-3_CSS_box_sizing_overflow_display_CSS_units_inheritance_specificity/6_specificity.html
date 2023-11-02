@@ -1,0 +1,64 @@
+<!--
+    CSS selectors precendence table in order of highest to lowest:
+       1. !important rule
+       2. inline styles
+       3. id selectors
+       4. class, pseudo class and attribute selectors
+       5. element and pseudo elements
+       6. universal selector.
+
+    What is specificity?
+      -> Specificity is an algorithm used by the browsers to determine which CSS selector is most specific, 
+         using the weighting system or score to make those calculations.
+
+      -> When there are conflits in the syles or have the same precedence then you have apply the specificity.
+
+      -> Specificity weighting score algo:
+         
+        Initial weight score
+
+                              0              0             0
+        
+        id selectors          1              0             0  => 100
+
+
+        class,                0              1             0  => 10
+        pseudo class,
+        attribute selectors
+
+        element,              0              0             1  => 1
+        pseudo element 
+        selectors
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        #text {
+           color: green;
+        }
+
+        h1 {
+          color: red; 
+        }
+
+        .h2 {
+            color: blue;   
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <h1 class="h2" id="text">
+        Hello Ashwani
+    </h1>
+    
+</body>
+</html>
