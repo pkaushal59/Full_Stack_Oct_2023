@@ -1,0 +1,117 @@
+<!--
+    What is CSS unit?
+        -> Eg: 10px, 1.5rem, 30em
+        -> It's a value that is used to specify the size of a property(like width, height, padding, margin) for an element.
+
+    How many CSS units are there?
+        -> There are 3 kinds of CSS units:
+            1. Absolute units: 
+              1. pixels(px): A pixel is a single dot on a computer screen.
+              2. mm(milimeter)
+              3. cm
+              4. inches(in) = 1in = 2.54cm = 96px
+              5. points(pt) 1pt = 1/72 of 1in
+
+            2.Relative units: Changes based on the size of parent element
+              1. em: based on the font size of parent element.
+                    eg: an element has a font size of 2.5em, it is 2.5 times of the font size of its parent element.
+                    This can make it difficult to create the consistent design accross different elements.
+                    This em unit is good for create scabale typography.
+              2. rem: based on the font size of the root element(html)
+                    eg: an element has a font size of 1.5rem, 1.5 times the size of its root element.
+                    Since the root elements font size doesn't change , 
+                    rem units are more predicatable and easier to work with.
+              3 %: A relative unit that is based on the size its parent element.
+
+            3. viewport units: specify the sizes and positions relative to the size of the viewport/ browser window.
+               1. vh (viewport height):  1vh = 1% of the viewport height.
+               2. vw (viewport width): 1vw = 1% of the viewport width.
+
+    Summary: Which CSS units should use a s a best practices in a project?
+        Media     Recommendation of units to use   ocassionally you use       not to use/recommendable
+
+    1.  Screen:    rem, em, %                           px                       vh, ve, pt, cm , mm
+    2.  Print :     rem, em, %                         px, pt                     vh, vw
+       
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS units</title>
+    <style>
+
+        /* .text-container {
+            font-size: 5px;
+        }
+
+        .text {
+            font-size: 2em;
+        } */
+
+        :root {
+            font-size: 10px;
+        }
+
+        .text {
+            font-size: 1.75rem; /* 1.75rem = 17.5px*/
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 50%;
+            background-color: red;
+            height: 100px;
+        }
+
+        .text-wrapper {
+            width: 80vw;
+            height: 80vh;
+            background-color: #CCC;
+        }
+
+        h1 {
+            font-size: 10vw;
+            margin: 2vh 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="text-container">
+            <p class="text">
+                Hello, Friends lets understand the CSS units and when to which units?
+            </p>
+        </div>
+    </section>
+
+     <div class="container">
+        <div class="box">
+            <p>This is a box</p>
+        </div>
+     </div>
+
+     <div class="text-wrapper">
+          <h1>Hello, Ashwani</h1>
+          <p>Completed my B.SC</p>
+          <p>Completed my B.Tech.</p>
+          <p>Cracked gate exam</p>
+          <p>Completes M.tech</p>
+     </div>
+    
+</body>
+</html>

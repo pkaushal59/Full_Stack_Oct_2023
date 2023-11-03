@@ -1,0 +1,116 @@
+<!--
+    What is layout?
+      -> Layout refers to the arrangement and positining of elements on a web page.
+
+    How to create layouts?
+
+       -> There are different ways to create layouts:
+          1. Normal Flow or flow layout: means how the browser lays out the HTML elements by default 
+            when you do nothing to contol the layout of the page.
+          2. via display property:
+             display: block | inline | inline-block | none
+          3. Position property: allows you to accurately position the elements within a web page.
+
+            position: static | relative | absolute | fixed | sticky
+
+            static(default): Elements are positioned according to the normal flow of the document.
+                            top, bottom, left, right and z-index properties have no effects.
+            relative: Elements are postioned to relative to their normal position in the document flow.
+
+                    top, bottom, left, right and z-index properties are applied.
+            absolute: Elements are positioned relative to their closest positioned ancestor.
+                    top, left and z-index properties
+            fixed: elements are positioned relative to the browser window regardless of scrolling.
+                   usecase: call to action button to be placed at the bottom.
+
+            sticky: Elements are positioned based on their normal position in the document flow until the speficied threshold is met.
+                  usecase: make your hearder of FSP, as sticky.
+
+        4. Floats: used for creating the layouts and positioning the elements in the past, especially we use it before flexbox came in the market.
+
+                Limitation to use Float property:
+                  -> causes the problem of overlapping.
+                  -> floats doesn't work well for responsive designs, as they don't automatically adjust 
+                     their position based different screen sizes.
+        
+                     To overcome this above float problem
+        5. flexbox(to make respondive layouts- Will learn in next class.
+
+
+        BEM rules article: https://css-tricks.com/bem-101/
+                 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout</title>
+    <style>
+
+        body {
+            height: 2000px;
+        }
+        .heading-wrapper {
+            position: relative;
+        }
+
+        .heading {
+            position: fixed;
+            top: 230px;
+            right: 300px;
+            bottom: 30px;
+            left: 750px;
+            z-index: -1;
+        }
+
+        img {
+            float: right;
+            margin: 0 20px;
+        }
+
+        p {
+            padding: 0 20px;
+        }
+
+        .btn-wrapper{
+            border: 1px solid red;
+        }
+
+        .bw__price {
+           font-size:  20px;
+        }
+
+        .bw__price--big {
+
+            font-size: 24px;
+
+        }
+
+        .bw__price--orange {
+             background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading-wrapper">
+        <h1 class="heading">CSS Layout</h1>
+    </div>
+
+    <p>Hi, Ashwin</p>
+
+    <h2> How are you?</h2>
+
+    <div>
+        <img src="./customer.png" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ex a metus viverra fermentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ex a metus viverra fermentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ex a metus viverra fermentum.</p>
+    </div>
+
+    <button class="btn-wrapper">
+        <span class="bw__price bw__price--big bw__price--orange">Price</span>
+    </button>
+    
+</body>
+</html>
