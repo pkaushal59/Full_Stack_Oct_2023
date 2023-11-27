@@ -40,9 +40,10 @@ console.log(arr);//[2,4,6,8,10]
 // Add items to a shopping cart to e-commerce application
 function addToCart(cart, item) {
    cart.push(item);
+   return cart;
 }
 
-let shoppingCart = ["Shoes"];
+let shoppingCart = [];
 
 addToCart(shoppingCart, "Shirts");
 addToCart(shoppingCart, "Pants");
