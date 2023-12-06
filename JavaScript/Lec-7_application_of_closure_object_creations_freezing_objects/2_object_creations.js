@@ -180,6 +180,10 @@ function Person(name, age) {
    }
 }
 
+Person.prototype.sayHi = function() {
+    
+}
+
 const ashwin = new Person("Ashwin", 30);
 
 console.log(ashwin);
