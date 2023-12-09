@@ -8,8 +8,8 @@
  * 
  *    - What is asynchronous code?
  *       
- *       - it's a non-blocking code, that allows multiple tasks to run simultaneously without waiting
- *         for each task to finish before moving on to the next one. 
+ *       - it's a non-blocking code, that allows multiple tasks 
+ *         to run simultaneously without waiting for each task to finish before moving on to the next one. 
  * 
  * 
  */
@@ -35,7 +35,7 @@ const fn = () => {
     console.log('i am fn');
 }
 
-setTimeout(fn, 2000); // 2000 means milliseconds delay -> 2s
+setTimeout(fn, 5000); // 2000 means milliseconds delay -> 2s
 
 console.log('After');
 
