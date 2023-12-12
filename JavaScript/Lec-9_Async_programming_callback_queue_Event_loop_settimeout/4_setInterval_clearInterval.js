@@ -1,7 +1,7 @@
 /**
  *   Usecases for using setInterval():
  *       1. re-send OTP.
- *       2. Capaingning for the big day sales like (new year, christmas, Deepawali....)
+ *       2. Campaigning for the big day sales like (new year, christmas, Deepawali....)
  * 
  *    setInterval():
  * 
