@@ -1,4 +1,4 @@
-const { runMlalgo } = require("./lib");
+const { runMlalgo, promiseRunMAlgo } = require("./lib");
 console.log("Before");
 let amount = 100;
 let priceofOne = 20;
@@ -8,6 +8,14 @@ const cb = () => {
   console.log("Amount: ", amount); // Rs 80
 };
 
-runMlalgo(cb);
+//runMlalgo(cb);
+
+const promise = promiseRunMAlgo();
+
+promise.then(()=>{
+  cb();
+}).catch((err)=>{
+   throw err;
+})
 
 console.log("After");

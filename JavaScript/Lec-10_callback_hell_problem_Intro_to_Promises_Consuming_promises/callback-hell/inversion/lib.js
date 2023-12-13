@@ -1,4 +1,4 @@
-const runMlalgo = (amount, cb) => {
+const runMlalgo = (cb) => {
   console.log("running ml algo");
   console.log("processing payment");
   setTimeout(function () {
