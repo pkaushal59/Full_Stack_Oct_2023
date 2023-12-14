@@ -21,7 +21,8 @@ function CustomPromise(exectorFn) {
        value = val;
        scbArr.forEach((scb)=>{
          scb(value);
-       })
+       });
+       excuteFinallyCallbacks();
     }
 
     const reject = (err) => {
@@ -30,7 +31,15 @@ function CustomPromise(exectorFn) {
         value = err;
         fcbArr.forEach((fcb)=>{
             fcb(value);
-        })
+        });
+
+        excuteFinallyCallbacks();
+    }
+
+    const excuteFinallyCallbacks = () =>{
+      finallyArr.forEach((cb)=>{
+        cb();
+      });
     }
 
     this.then = function(cb){
@@ -41,7 +50,6 @@ function CustomPromise(exectorFn) {
      }
 
      return this;
-
     }
 
     this.catch = function(cb) {
@@ -54,7 +62,12 @@ function CustomPromise(exectorFn) {
     }
 
     this.finally = function(cb) { // Please do it this as HW
-
+       if(state === RESOLVED || state === REJECTED) {
+          cb();
+       } else {
+        finallyArr.push(cb);
+       }
+      return this;
     }
 
     exectorFn(resolve, reject);
@@ -62,22 +75,22 @@ function CustomPromise(exectorFn) {
 
 const promise = new CustomPromise((resolve, reject)=>{
     setTimeout(()=>{
-        // const data = {name: 'Ashwani Rajput', designation: 'Engineering Manager'};
-        const data = null;
+        const data = {name: 'Ashwani Rajput', designation: 'Engineering Manager'};
+        //const data = null;
         if(data) {
             resolve(data);
         } else {
             reject(new Error("Data can not be fetched!!!"))
         }
-    }, 1000);
+    }, 2000);
 });
 
 promise.then((res)=>{ // if you want to chaining what shoudl you do? please correct the code accordingly.
     console.log(res);
-});
-
-promise.catch((err)=> {
+}).catch((err)=> {
     console.log(err);
+}).finally(()=>{
+    console.log('Data fetching has been done succesfully!!');
 });
 
 
