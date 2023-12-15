@@ -52,6 +52,8 @@ function CustomPromise(exectorFn) {
      return this;
     }
 
+
+
     this.catch = function(cb) {
         if(state === REJECTED) {
             cb(value);
@@ -75,8 +77,8 @@ function CustomPromise(exectorFn) {
 
 const promise = new CustomPromise((resolve, reject)=>{
     setTimeout(()=>{
-        const data = {name: 'Ashwani Rajput', designation: 'Engineering Manager'};
-        //const data = null;
+        //const data = {name: 'Ashwani Rajput', designation: 'Engineering Manager'};
+        const data = null;
         if(data) {
             resolve(data);
         } else {
