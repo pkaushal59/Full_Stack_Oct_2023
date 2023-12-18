@@ -17,7 +17,7 @@
  * 
  *       7. style: provide the access to the inline styles to the elements.
  *      
- *       8. addClass() -> to give the class name to any HTML elements.
+ *       8. classList.add(className): Adds a CSS class to the element. -> to give the class name to any HTML elements.
  * 
  *       9. setattribute('name', 'value');
  *    
