@@ -1,8 +1,7 @@
 class IntersectionObserverUtil {
     constructor(callback, options) {
         this.callback = callback;
-
-        this.observer = new IntersectionObserver(this.handleIntersection.bind(this), options)
+        this.observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
     }
 
     handleIntersection(entries) {
@@ -11,20 +10,20 @@ class IntersectionObserverUtil {
                 this.callback(entry.target);
                 this.unobserve(entry.target);
             }
-        });    
+        });
     }
 
-    observe(target){
-      if(target instanceof Element) {
-        this.observer.observe(target);
-      } else {
-        console.error('Invalid target element:', target);
-      }
-    }
-
-    unobserve(target){
+    observe(target) {
         if(target instanceof Element) {
-            this.observer.unobserve(target)
+            this.observer.observe(target);
+        } else {
+            console.error('Invalid target element:', target);
+        }
+    }
+
+    unobserve(target) {
+        if(target instanceof Element) {
+            this.observer.unobserve(target);
         } else {
             console.error('Invalid target element:', target);
         }

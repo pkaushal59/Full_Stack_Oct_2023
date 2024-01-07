@@ -64,11 +64,15 @@ section{
     text-align: center;
 }
 
+.bg-img {
+    background-image: url('../assets/images/foodies_pizza_ready_for_baking.png');
+}
+
 /* header */
 header{
-    background: url('../assets/images/foodies_pizza_ready_for_baking.png') center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -229,7 +233,6 @@ nav ul{
 
 /* Review Section */
 .review{
-    background-image: url('../assets/images/foodies_pizza_ready_for_baking.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

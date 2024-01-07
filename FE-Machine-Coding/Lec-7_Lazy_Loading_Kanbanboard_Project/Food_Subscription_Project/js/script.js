@@ -1,29 +1,33 @@
 import IntersectionObserverUtil from "../utils/lazyload.js";
 
-const handleImageIntersection = (img) => {
-    img.src = img.dataset.src;   
-    img.onload = () =>{
+const handleImgIntersection = (img) => {
+    img.src = img.dataset.src;
+    img.onload = () => {
         img.removeAttribute('data-src');
-        // intersectionObserver.unobserve(img);
+    };
+};
+
+const handleIntersection = (element) => {
+    if (element.tagName === 'IMG') {
+        handleImgIntersection(element);
+    } else {
+        // Handle other types of elements as needed
+        console.log('Handling other element types:', element);
     }
-}
+};
 
 const options = {
-   threshold: 0.5,
-   rootMargin: '200px',
+    threshold: 0.5,
+    rootMargin: '200px',
 }
 
+const intersectionObserver = new IntersectionObserverUtil(handleIntersection, options);
 
 const lazyLoadImages = () => {
-    const intersectionObserver = new IntersectionObserverUtil(handleImageIntersection, options);
+    const imgElems = document.querySelectorAll("img[data-src]");
 
-    const images = document.querySelectorAll("img[data-src]");
-
-    console.log(images);
-
-    images.forEach((image)=>{
-        intersectionObserver.observe(image);
-        //intersectionObserver.unobserve(image);
+    imgElems.forEach((img) => {
+        intersectionObserver.observe(img);
     });
 }
 
